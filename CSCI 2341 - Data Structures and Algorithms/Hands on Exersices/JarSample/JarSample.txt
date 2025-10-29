@@ -1,0 +1,57 @@
+
+========================================
+info
+
+
+This short program is designed to illustrate two things:
+
+1. Use of an OpeningScreen class object to create and display the opening
+   screen needed for any assignment program. This first screen displays three
+   lines of information: a first line of programmer ID information, and two
+   additional lines of submission information. These three lines will appear
+   indented two TAB positions (16 spaces from the left margin) and vertically
+   centered on the screen, with a screen that is otherwise empty, except for
+   a pause on the last line that requires the user to press Enter to continue.
+
+2. Use of a TextItems class object to display program information from a file.
+   In order to be read properly, the file must have the proper format, which
+   is illustrated by the file from which this information has been read:
+   - Beginning and ending lines of 40 equals signs ... anything before the
+     first one or after the second one is ignored
+   - A line of 40 dashes (hyphens) to mark the end of each "text item" ...
+     this file just contains one text item
+   - A "text item label" as the first line of every text item ... the label
+     of the first text item in this file is "ProgramDescription" (for example)
+   - A line of 40 exclamation marks at any place where a pause in the display
+     is required ... for this file that is after the first page and at the end
+
+                                                                 Screen 1 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+This is line 1
+This is line 2
+This is line 3
+This is line 4
+This is line 5
+This is line 6
+This is line 7
+This is line 8
+This is line 9
+This is line 10
+This is line 11
+This is line 12
+This is line 13
+This is line 14
+This is line 15
+This is line 16
+This is line 17
+This is line 18
+This is line 19
+This is line 20
+This is line 21
+This is line 22
+This is line 23
+                                                                 Screen 2 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----------------------------------------
+========================================
+This text is also simply ignored ...

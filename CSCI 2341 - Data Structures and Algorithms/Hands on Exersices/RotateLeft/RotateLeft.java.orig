@@ -1,0 +1,23 @@
+public class RotateLeft {
+public static void main(String[] args){
+//Read the arguments
+int n = Integer.parseInt(args[0]);
+int rotations = Integer.parseInt(args[1]);
+//an array with values 1 to  n
+int[] arr =  new int[n];
+for(int i = 0; i < n; i++){
+arr[i] =  i + 1;
+}
+//normalizing rotations
+rotations = rotations % n;
+//print rotated array
+for(int i = 0; i < n; i++){
+int index = (i + rotations) % n;
+System.out.print(arr[index]);
+if (i < n - 1){
+System.out.print(" ");
+}
+}
+System.out.println();
+}
+}

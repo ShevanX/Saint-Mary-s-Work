@@ -1,0 +1,163 @@
+import java.util.Scanner;
+
+public class CompareAlgorithms
+{
+
+    public static void main(String[] args)
+    {
+        if (args.length == 0)
+        {
+            // Display opening screen and program info
+            OpeningScreen opc = new OpeningScreen(
+                "Shevan Walimini Devage:A00490556:u33",
+                "Submission 03",
+                "Comparing Three Algorithms for Computing Sums of Integers");
+            opc.display();
+
+            TextItems infoFile = new TextItems(
+                    CompareAlgorithms.class.getResourceAsStream
+                ("CompareAlgorithms.txt"));
+            infoFile.displayItem("ProgramDescription");
+            return;
+        }
+
+        long n = 0;
+        try
+        {
+            n = Long.parseLong(args[0]);
+            if (n <= 0)
+            {
+                System.out.println("Input must be a positive integer.");
+                return;
+            }
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println
+            ("Invalid input. Please enter a positive integer.");
+            return;
+        }
+
+        AlgorithmTester tester = new AlgorithmTester(n);
+
+        tester.runAlgorithmA();
+        tester.runAlgorithmB();
+        tester.runAlgorithmC();
+
+
+        tester.displayResults();
+    }
+}
+
+// ===========================================================
+// AlgorithmTester (non-public, in same file)
+// ===========================================================
+class AlgorithmTester
+{
+
+    private long n;
+    private Stopwatch timer;
+    private OperationCounter counter;
+
+    private double timeA, timeB, timeC;
+    private long assignA, assignB, assignC;
+    private long arithA, arithB, arithC;
+
+    public AlgorithmTester(long n)
+    {
+        this.n = n;
+        this.timer = new Stopwatch();
+        this.counter = new OperationCounter();
+    }
+
+    // ---------------- Algorithm A ----------------
+    public void runAlgorithmA()
+    {
+        counter.reset();
+
+        long sum = 0;
+        counter.incrementAssignments();
+
+        timer.start();
+        for (long i = 1; i <= n; i++)
+        {
+            sum = sum + i;
+            counter.incrementOther(); // use Other for arithmetic
+            counter.incrementAssignments();
+            timer.delay();
+        }
+        timer.stop();
+
+        timeA = timer.getSeconds();
+        assignA = counter.getNumberOfAssignments();
+        arithA = counter.getNumberOfOther();
+    }
+
+    // ---------------- Algorithm B ----------------
+    public void runAlgorithmB()
+    {
+        counter.reset();
+
+        long sum = 0;
+        counter.incrementAssignments();
+
+        timer.start();
+        for (long i = 1; i <= n; i++)
+        {
+            for (long j = 1; j <= i; j++)
+            {
+                sum = sum + 1;
+                counter.incrementOther();
+                counter.incrementAssignments();
+                timer.delay();
+            }
+        }
+        timer.stop();
+
+        timeB = timer.getSeconds();
+        assignB = counter.getNumberOfAssignments();
+        arithB = counter.getNumberOfOther();
+    }
+
+    // ---------------- Algorithm C ----------------
+    public void runAlgorithmC()
+    {
+        counter.reset();
+
+        timer.start();
+        long sum = n * (n + 1) / 2;
+        counter.incrementOther();
+        counter.incrementOther();
+        counter.incrementAssignments();
+        timer.delay();
+        timer.stop();
+
+        timeC = timer.getSeconds();
+        assignC = counter.getNumberOfAssignments();
+        arithC = counter.getNumberOfOther();
+    }
+
+    // ---------------- Display Results ----------------
+    public void displayResults()
+    {
+        System.out.println();
+        System.out
+                .printf
+        ("%20s %13s %15s%n", "Time", "Assignments",
+                          "Arithmetic Ops");
+        System.out
+                .printf
+        ("Algorithm A:   %-8.3f  %-13d %-15d%n", timeA, assignA,
+                          arithA);
+        System.out
+                .printf
+        ("Algorithm B:   %-8.3f  %-13d %-15d%n", timeB, assignB,
+                          arithB);
+        System.out
+                .printf
+        ("Algorithm C:   %-8.3f  %-13d %-15d%n", timeC, assignC,
+                          arithC);
+        System.out.println();
+
+    }
+}

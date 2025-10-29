@@ -1,0 +1,18 @@
+public class JarSample
+{
+    public static void main(String[] args)
+    {
+        OpeningScreen opc = new
+        OpeningScreen("Shevan:Walimini:A00490556:u33: A322",
+                      "Jar Sample Hands-On Exercise",
+                      "Displaying an Openning Screen and Two Screens of Text");
+        opc.display();
+
+        TextItems ti = new TextItems(
+            JarSample.class.getResourceAsStream("JarSample.txt"));
+        ti.displayItem("info");
+
+
+
+    }
+}

@@ -1,0 +1,26 @@
+public class SwitchDigitPairs {
+    public static int switchDigitPairs(int number) {
+        String numStr = Integer.toString(number);
+        StringBuilder result = new StringBuilder();
+
+        // If the length of the number string is odd, append '0' at the beginning
+        if (numStr.length() % 2 != 0) {
+            numStr = "0" + numStr;
+        }
+
+        // Iterate through the string in pairs and switch them
+        for (int i = 0; i < numStr.length(); i += 2) {
+            result.append(numStr.charAt(i + 1));
+            result.append(numStr.charAt(i));
+        }
+
+        return Integer.parseInt(result.toString());
+    }
+
+    public static void main(String[] args) {
+        int num = Integer.parseInt(args[0]);
+        int switchedNum = switchDigitPairs(num);
+        System.out.println("Programmed by Shevan Walimini: ");
+        System.out.println(switchedNum);
+    }
+}

@@ -1,0 +1,30 @@
+
+========================================
+ProgramDescription
+
+This program takes a single command-line parameter, which must be a positive
+integer (there is no error checking on the input). The program then uses three
+different algorithms to find the sum of all positive integers from 1 up to
+and including the value input:
+
+Algorithm A uses a single loop to accumulate the values.
+
+Algorithm B uses a nested loop structure in which the inner loop accumulates
+values from 1 to an increasing limit, and the outer loop accumulates those
+intermeidiate sums.
+
+Algorithm C simply uses the well-known formula for the sum in question.
+
+The program times each of the algorithms, counts the number of assignments
+and arithmetic operations performed by each algorithm, and then displays a
+table showing the results and allowing the performance of the algorithms to
+be compared.
+
+
+
+
+
+                                                               Screen 1 of 1
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----------------------------------------
+========================================

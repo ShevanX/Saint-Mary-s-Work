@@ -1,0 +1,56 @@
+
+========================================
+ProgramInfo
+
+This program either encodes or decodes a single-line message consisting
+of uppercase letters only, using a Vigenere square for the encoding/decoding
+scheme. No lowercase letters or punctuation characters are permitted, but
+blank spaces are permitted and are left in their original positions in the
+message without being encoded. A lowercase letter is used as the key to
+determine the row of the Vigenere square to use for encoding or decoding of
+each character of the message, and an uppercase letter in the message is
+used to determine the column of the Vigenere square to be used to encode or
+decode the message letter. The row and column then determine the cell of the
+Vigenere square that contains the uppercase letter that encodes or decodes
+that letter of the message.
+
+The program takes three command-line inputs. The first must be an e or a d
+to indicate whether encoding or decoding is desired. The second must be the
+message to be encoded or decoded (the message must be enclosed in double
+quotes if it contains any blank spaces). The third must be a string of one
+or more lowercase letters to be used for the key. The program must recognize
+and report any of three possible errors that might occur: first, a bad first
+parameter; second, a message that does not contain only uppercase letters
+or blank spaces; third, a key that does not contain only lowercase letters.
+In each case the program must display an appropriate message, pause and then
+terminate.
+                                                                  Page 1 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Example 1 (encoding a message)
+If the input values are e POSTPONE debt
+the output is SSTMSSOX
+
+Example 1 (decoding that same message)
+If the input values are d SSTMSSOX debt
+the output is POSTPONE
+
+Example 2 (encoding a message)
+If the input values are
+e "MEET ME IN THE PARK" romeo
+the output is
+DSQX DS MB HTI GODO
+
+Example 2 (decoding that same message)
+If the input values are
+d "DSQX DS MB HTI GODO" romeo
+the output is
+MEET ME IN THE PARK
+
+
+
+                                                                  Page 2 of 2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----------------------------------------
+========================================
+

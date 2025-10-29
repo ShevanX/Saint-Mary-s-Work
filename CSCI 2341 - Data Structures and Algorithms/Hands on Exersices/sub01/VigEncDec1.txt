@@ -1,0 +1,30 @@
+
+========================================
+ProgramInfo
+
+This program either encodes or decodes a single character using a Vigenere
+square for the encoding/decoding scheme. The single character must be an
+uppercase letter. Thus no lowercase letters or punctuation characters are
+permitted. A lowercase letter is used as the key to determine the row of the
+Vigenere square to use for encoding or decoding, and the uppercase letter is
+used to determine the column of the Vigenere square to be used to encode or
+decode the input letter. The row and column then determine the cell of the
+Vigenere square that contains the uppercase letter that encodes or decodes
+the input letter.
+
+The program takes three command-line inputs. The first must be an e or a d
+to indicate whether encoding or decoding is desired. The second must be the
+uppercase letter to be encoded or decoded. The third must be the lowercase
+letter to be used for the key. If any of the three required inputs is not
+valid, the program outputs an appropriate error message and terminates.
+
+Example (valid encoding of an uppercase letter)
+If the input values are e P f the encoded value of P is U.
+
+Example (valid decoding the encoded version of that same uppercase letter)
+If the input values are d U f the decoded value of U is P.
+
+                                                                  Page 1 of 1
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----------------------------------------
+========================================

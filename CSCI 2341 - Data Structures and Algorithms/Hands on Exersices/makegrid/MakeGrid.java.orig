@@ -1,0 +1,26 @@
+public class MakeGrid
+{
+    public static void main(String[] args)
+    {
+        int n = Integer.parseInt(args[0]);
+        System.out.println();
+
+    
+       System.out.println("Programmed by Shevan Walimini: E186");
+
+        for (int row = 0; row < n; row++)
+        {
+            for (int col = 0; col < n; col++)
+            {
+                char letter = (char) ('A' + (row+col) % 26);
+                System.out.print(letter);
+            }
+            System.out.println();
+            
+        }
+        System.out.println();
+
+    }
+}
+
+
