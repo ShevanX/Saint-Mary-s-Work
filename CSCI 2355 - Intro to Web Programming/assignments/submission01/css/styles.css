@@ -1,0 +1,134 @@
+:root {
+    --header-color: #9b5de5;
+    --font-color: #f5e6ff;
+    --bg-color: #1c1b29;
+    --accent-color: #00bbf9;
+}
+
+body {
+    background: linear-gradient(135deg, #2f0442, #000000);
+    color: var(--font-color);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #d4af37;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.reach-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e0e0e0;
+}
+
+.reach-title .big {
+    font-size: 2.8rem;
+    display: inline-block;
+    transform: translateY(-2px);
+    font-style: italic;
+    font-weight: 800;
+    color: #f5d742;
+}
+
+.band-photo {
+    display: block;
+    width: 80vw;
+    border-radius: 4px;
+    border: 2px solid #d4af37;
+    height: auto;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #c5a3ff;
+    margin-top: 40px;
+}
+
+nav {
+    text-align: center;
+    margin: 15px 0;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #f5d742;
+    text-shadow: 0 0 8px #f5d742;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.member img {
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.member .info {
+    max-width: 600px;
+}
+
+.member ul {
+    margin: 5px 0 0 20px;
+}
+
+.member strong {
+    background: linear-gradient(90deg, #ffd700, #c0c0c0, #b57edc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: #f5d742;
+}
+
+a:link,
+a:visited {
+    color: #e0e0e0;
+}
+
+a:hover {
+    color: #c5a3ff;
+}
+
+a:active {
+    color: #d4af37;
+}
+
+h3 {
+    color: #f5d742;
+    text-shadow: 0 0 8px rgba(245, 215, 66, 0.6);
+}

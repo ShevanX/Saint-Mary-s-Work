@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: cursive;
+}
+
+/* Flex container for main structure */
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+/* Header section */
+.header {
+    text-align: center;
+    border-bottom: 5px solid black;
+    padding: 20px 0;
+}
+
+.header h1 {
+    color: red;
+    font-size: 2em;
+    margin: 20px 0;
+    /* added spacing top and bottom */
+}
+
+/* Main message section */
+.message {
+    border-bottom: 5px solid black;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 1.0em;
+}
+
+/* Photo and description */
+.photo-section {
+    display: flex;
+    font-size: 1.0em;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid black;
+    padding: 20px;
+    gap: 20px;
+    /* added for cleaner spacing between text and image */
+}
+
+.photo-section p {
+    width: 70%;
+    line-height: 1.5;
+}
+
+.photo-section img {
+    width: 25%;
+    height: auto;
+    /* ensures image keeps proportions */
+    border: 5px solid red;
+}
+
+/* Contact section */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    padding: 15px 20px;
+    /* slightly increased for balance */
+    border-top: 5px solid black;
+    /* added missing top border */
+}
+
+.contact .left {
+    width: 40%;
+}
+
+.contact .right {
+    width: 50%;
+}
+
+.contact ul {
+    list-style-type: none;
+}
