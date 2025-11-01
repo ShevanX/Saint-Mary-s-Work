@@ -1,0 +1,10 @@
+>java -jar A07.jar
+Assignment07
+Young, Joshua
+A00000000
+
+This program is the third version of a simple chess game.
+
+Program instructions
+
+Press enter to continue...
