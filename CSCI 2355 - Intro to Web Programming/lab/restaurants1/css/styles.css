@@ -1,0 +1,86 @@
+:root {
+    --accent-color: #FF3B3F;
+    --accent-dark-color: #EF2B2F;
+    --font-color: #595959;
+    --bg-color: #CAEBF2;
+}
+
+body {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+    color: var(--font-color);
+}
+
+main {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+a:link {
+    color: var(--font-color);
+}
+
+a:visited {
+    color: var(--font-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+a:active {
+    color: var(--accent-color);
+}
+
+header {
+    background-color: white;
+    padding: 5px 0;
+    margin: 0;
+}
+
+header h1 {
+    color: var(--accent-color);
+    font-size: 3rem;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 3px gray;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav li a:hover {
+    color: white;
+    background-color: var(--accent-color);
+}
+
+.feature {
+    border-radius: 10px;
+    background: white;
+    padding: 2px 15px 20px 15px;
+    margin: 10px 0;
+}
+
+.feature a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.feature-right {
+    margin-left: 12px;
+}
